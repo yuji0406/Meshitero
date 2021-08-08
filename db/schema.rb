@@ -13,25 +13,25 @@
 ActiveRecord::Schema.define(version: 2021_06_20_000640) do
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_image_id"
+    t.integer "user_id", null: false
+    t.integer "post_image_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "post_comments", force: :cascade do |t|
-    t.text "comment"
-    t.integer "user_id"
-    t.integer "post_image_id"
+    t.text "comment", null: false
+    t.integer "user_id", null: false
+    t.integer "post_image_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "post_images", force: :cascade do |t|
-    t.text "shop_name"
-    t.string "image_id"
-    t.text "caption"
-    t.integer "user_id"
+    t.text "shop_name", null: false
+    t.string "image_id", null: false
+    t.text "caption", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
